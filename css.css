@@ -1,0 +1,186 @@
+* {box-sizing: border-box;}
+
+/* Style the navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the input container */
+.topnav .login-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+.topnav input[type=password] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.topnav input[type=submit] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+/* Style the button inside the input container */
+.topnav .login-container login {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container login:hover {
+  background: #ccc;
+}
+
+
+.column {
+  padding: 6px;
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+padding: 6px;
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/*sign up*/
+.signupbox{
+	background-color:#cdc0b0;
+	color:#00008b;
+	padding: 100px;
+    margin-top: 10px;
+    border: red;
+    width: 70%;
+	margin-left: auto;
+    margin-right: auto;
+	
+	
+}
+
+/* Style the input container */
+.signup {
+  float: center;
+}
+
+/* Style the input field inside the navbar */
+.signup input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+.signup input[type=password] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.signup input[type=submit] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.signup input[type=email] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/* Style the button inside the input container */
+.signup button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.signup button:hover {
+  background: #ccc;
+}
+/* Style in the inside of the card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
