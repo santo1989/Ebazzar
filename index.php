@@ -12,6 +12,7 @@
   <a class="active" href="index.php">E-bazzaR</a>
   <a href="register.php">Open a New Account</a>
   <a href="#cart">Cart</a>
+  <a href="Admin.php">Admin Login</a>
   <!--<form action="newlogin.php" method="post">-->
 <form action="loginproc.php" method="post">
 <div class="login-container">
