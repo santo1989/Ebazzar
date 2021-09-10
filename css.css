@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 /* Style the navbar */
 .topnav {
@@ -25,7 +27,7 @@
 
 /* Active/current link */
 .topnav a.active {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
 
@@ -35,14 +37,14 @@
 }
 
 /* Style the input field inside the navbar */
-.topnav input[type=text] {
+.topnav input[type='text'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
   width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
-.topnav input[type=password] {
+.topnav input[type='password'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -50,7 +52,7 @@
   width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
 
-.topnav input[type=submit] {
+.topnav input[type='submit'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -73,7 +75,6 @@
   background: #ccc;
 }
 
-
 .column {
   padding: 6px;
   float: left;
@@ -82,25 +83,22 @@
 
 /* Clear floats after the columns */
 .row:after {
-padding: 6px;
-  content: "";
+  padding: 6px;
+  content: '';
   display: table;
   clear: both;
-
 }
 
 /*sign up*/
-.signupbox{
-	background-color:#cdc0b0;
-	color:#00008b;
-	padding: 100px;
-    margin-top: 10px;
-    border: red;
-    width: 70%;
-	margin-left: auto;
-    margin-right: auto;
-	
-	
+.signupbox {
+  background-color: #cdc0b0;
+  color: #00008b;
+  padding: 100px;
+  margin-top: 10px;
+  border: red;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Style the input container */
@@ -109,22 +107,14 @@ padding: 6px;
 }
 
 /* Style the input field inside the navbar */
-.signup input[type=text] {
+.signup input[type='text'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
   width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
-.signup input[type=password] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
-}
-
-.signup input[type=submit] {
+.signup input[type='password'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -132,7 +122,15 @@ padding: 6px;
   width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
 
-.signup input[type=email] {
+.signup input[type='submit'] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.signup input[type='email'] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -183,4 +181,12 @@ padding: 6px;
 
 .card button:hover {
   opacity: 0.7;
+}
+
+.table {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
 }

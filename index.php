@@ -13,8 +13,9 @@
   <a href="register.php">Open a New Account</a>
   <a href="#cart">Cart</a>
   <a href="Admin.php">Admin Login</a>
+  <a href="search.php">search</a>
   <!--<form action="newlogin.php" method="post">-->
-<form action="loginproc.php" method="post">
+  <form action="loginproc.php" method="post">
 <div class="login-container">
 		<?php include 'loginproc.php';?>
 		<input type="text" name="UserN" id="UserN" placeholder="Username"></input>
@@ -24,6 +25,7 @@
 </form>
   
 </div>
+
 <div class="row">
 <?php
 $host = "localhost"; /* Host name */

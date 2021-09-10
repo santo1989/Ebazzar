@@ -1,11 +1,6 @@
-
 <?php 
-// Initialize shopping cart class 
-include_once 'Cart.php'; 
-$cart = new Cart; 
- 
+// Initialize shopping cart class   
 // Include the database config file 
- 
 require "loginproc.php";
  ?>
 <!DOCTYPE html>

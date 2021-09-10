@@ -2,7 +2,7 @@
 include "config.php";
 
 if(isset($_POST['login'])){
-$UserN = mysqli_real_escape_string($con,$_POST['UserN']);
+    $UserN = mysqli_real_escape_string($con,$_POST['UserN']);
     $pass = mysqli_real_escape_string($con,$_POST['pass']);
 
 if ($UserN != "" && $pass != ""){

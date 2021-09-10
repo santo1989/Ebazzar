@@ -63,6 +63,7 @@ if($check_price){
   <p><?php echo $row['Description'];?></p>
   <p class="price"><?php echo 'Tk= '.$row['Price'];?></p>
   <p><button name="add" type="submit" action="cart.php" method="post">Add to Cart</button></p>
+  
 </div>
 </div>
 		<?php		
