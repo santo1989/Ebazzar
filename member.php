@@ -16,7 +16,7 @@ include "config.php";?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Member</title>
+	<title>Wellcome </title>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -33,14 +33,12 @@ include "config.php";?>
 // to change a session variable, just overwrite it
 if(isset($_POST['login']))
 { session_start(); // that will start the session
-        //$_SESSION['UID']= $_POST['login'];
-        //echo "Welcome ".$_SESSION['UID'];
 		echo $_SESSION['login'];
     }
 ?>	</a>
 		
 </div>
-<h1>Welcome </h1>
+<h1>Welcome</h1>
 <div class="row">
 <?php
 $host = "localhost"; /* Host name */
@@ -62,8 +60,16 @@ if($check_price){
   <p><?php echo 'PID'. $row['PriceID'];?></p>
   <p><?php echo $row['Description'];?></p>
   <p class="price"><?php echo 'Tk= '.$row['Price'];?></p>
-  <p><button name="add" type="submit" action="cart.php" method="post">Add to Cart</button></p>
-  
+  <form action="cart.php" method="GET">
+  <p><button name="add" type="submit" action="cart.php" method="GET">Add to Cart</button></p>
+  </form>
+	   <a class="active" <?php
+// to change a session variable, just overwrite it
+if(isset($_POST['add']))
+{ session_start(); 
+		echo $_SESSION['add'];
+    }
+?></a>
 </div>
 </div>
 		<?php		

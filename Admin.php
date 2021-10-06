@@ -3,6 +3,25 @@
 // Include the database config file 
 require "loginproc.php";
  ?>
+ 
+<?php
+// for sending Edit from database 
+include 'CRUD.php';
+if (isset($_GET['edit'])) {
+    $PriceID = $_GET['edit'];
+    $edit_state = true;
+    
+    $record = mysqli_query($con, "SELECT * FROM pricedb WHERE PriceID=$PriceID");
+      $data = mysqli_fetch_array($record);
+      $Name = $data['Name'];
+      $Description = $data['Description'];
+      $Price = $data['Price'];
+      $image = $data['image'];
+      $category = $data['category'];
+    
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,18 +34,13 @@ require "loginproc.php";
   <a  href="index.php">E-bazzaR</a>
   <a href="register.php">Open a New Account</a>
   <a href="#cart">Cart</a>
-  <a class="active" href="Admin.php">Admin Login</a>
+  <a class="active" href="Admin.php">Admin</a>
   <!--<form action="newlogin.php" method="post">-->
-<form action="loginproc.php" method="post">
-<div class="login-container">
-		<?php include 'loginproc.php';?>
-		<input type="text" name="UserN" id="UserN" placeholder="Username"></input>
-		<input type="password" name="pass" id="pass" placeholder="Password"></input>
-		<input type="submit" value="LOGIN" name="login" id="login"></input>
 </div>
 </form> 
 </div>
 <div class="contain">
+
 <div class="search">
    <div class="row">
    <div class="colume" style="margin-top: 5%;">
@@ -63,7 +77,7 @@ require "loginproc.php";
      <th>Price</th>
      <th>image</th>
      <th>category</th>
-     <th>Add to cart</th>
+     <th>Operation</th>
      
   </tr>
   <?php while( $row = $result->fetch_object() ): ?>
@@ -74,8 +88,7 @@ require "loginproc.php";
      <td><?php echo $row->Price ?></td>
      <td><img src="image/<?php echo $row->image?>"></td>
      <td><?php echo $row->category ?></td>
-     <td><button>Update</button> </br></br> <!--line brack -->
-	 <button>Delete</button>
+     <td><a href="edit.php"><button >CRUD Operation</button> </br></br> <!--line brack -->
 	</td>
   </tr>
   <?php endwhile; ?>

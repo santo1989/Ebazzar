@@ -1,5 +1,9 @@
-<?php require "loginproc.php";
- ?>
+<?php 
+// Initialize shopping cart class   
+// Include the database config file 
+require "loginproc.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,22 +13,22 @@
 </head>
 <body>
 <div class="topnav">
-  <a href="index.php">E-bazzaR</a>
+  <a  href="index.php">E-bazzaR</a>
   <a href="register.php">Open a New Account</a>
-  <a href="#cart">Cart</a>
-  <a href="Admin.php">Admin Login</a>
-  <a class="active" href="search.php">search</a>
+  <a href="#cart.php">Cart</a>
+  <a class="active" href="Adminlog.php">Admin</a>
   <!--<form action="newlogin.php" method="post">-->
-  <form action="loginproc.php" method="post">
+<form action="loginproc.php" method="post">
 <div class="login-container">
 		<?php include 'loginproc.php';?>
-		<input type="text" name="UserN" id="UserN" placeholder="Username"></input>
-		<input type="password" name="pass" id="pass" placeholder="Password"></input>
-		<input type="submit" value="LOGIN" name="login" id="login"></input>
+		<input type="text" name="AdminN" id="AdminN" placeholder="Username"></input>
+		<input type="password" name="passN" id="passN" placeholder="Password"></input>
+		<input type="submit" value="LOGIN" name="loginN" id="loginN"></input>
 </div>
-</form>
-  
+</form> 
 </div>
+<div class="contain">
+
 <div class="search">
    <div class="row">
    <div class="colume" style="margin-top: 5%;">
@@ -61,7 +65,6 @@
      <th>Price</th>
      <th>image</th>
      <th>category</th>
-     <th>Add to cart</th>
      
   </tr>
   <?php while( $row = $result->fetch_object() ): ?>
@@ -72,7 +75,7 @@
      <td><?php echo $row->Price ?></td>
      <td><img src="image/<?php echo $row->image?>"></td>
      <td><?php echo $row->category ?></td>
-     <td><a href="register.php"><button>Add to Cart</button></a></td>
+	</td>
   </tr>
   <?php endwhile; ?>
 </table>

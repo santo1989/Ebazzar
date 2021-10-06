@@ -12,7 +12,7 @@
   <a class="active" href="index.php">E-bazzaR</a>
   <a href="register.php">Open a New Account</a>
   <a href="#cart">Cart</a>
-  <a href="Admin.php">Admin Login</a>
+  <a href="Adminlog.php">Admin Login</a>
   <a href="search.php">search</a>
   <!--<form action="newlogin.php" method="post">-->
   <form action="loginproc.php" method="post">
@@ -47,7 +47,7 @@ if($check_price){
   <p><?php echo 'PID'. $row['PriceID'];?></p>
   <p><?php echo $row['Description'];?></p>
   <p class="price"><?php echo 'Tk= '.$row['Price'];?></p>
-  <p><button>Add to Cart</button></p>
+  <p><a href="register.php"><button >Add to Cart</button></a></p>
 </div>
 </div>
 		<?php		

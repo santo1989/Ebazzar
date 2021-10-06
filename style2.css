@@ -1,0 +1,122 @@
+body {
+    background-color: #eceaea;
+    font-size: 19px;
+  }
+  table{
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  tr{
+    border-bottom: 1px solid #cbcbcb;
+  }
+  th, td {
+    border: none;
+    height: 30px;
+    padding: 1px;
+  }
+  tr:hover {
+    background: lightgrey;
+  }
+  form {
+      width: 45%;
+      margin: 20px auto;
+      text-align: left;
+      padding: 10px; 
+      border: 1px solid #bbbbbb; 
+      border-radius: 5px;
+  }
+  .input-group {
+      margin: 10px 0px 10px 0px;
+  }
+  .input-group input {
+      height: 30px;
+      width: 93%;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid gray;
+  }
+  .btn {
+      padding: 10px;
+      font-size: 15px;
+      color: white;
+      background: #5F9EA0;
+      border: none;
+      border-radius: 5px;
+  }
+  .edit_btn {
+      text-decoration: none;
+      padding: 2px 5px;
+      background: #009688;
+      color: white;
+      border-radius: 20px;
+  }
+  .del_btn {
+      text-decoration: none;
+      padding: 2px 5px;
+      color: white;
+      border-radius: 20px;
+      background: #a10a08;
+  }
+  .message {
+      margin: 30px auto; 
+      padding: 10px; 
+      border-radius: 5px; 
+      color: black; 
+      background: lightgreen; 
+      border: 1px solid #3c763d;
+      width: 50%;
+      text-align: center;
+  }
+  .text-danger
+  {
+    font-size: 25px;
+      color: white;
+      border-radius: 5px;
+      background: #2E8B57;
+  }
+  .addnewentry
+  {
+      font-size: 15px;
+      color: black;
+      border-radius: 18px;
+      background: #f44336;
+  }
+  body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+  .form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+  }
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+    
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
