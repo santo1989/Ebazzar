@@ -2,19 +2,21 @@
 include "config.php";
 
 if(isset($_POST['login'])){
-    $UserN = mysqli_real_escape_string($con,$_POST['UserN']);
+    $username = mysqli_real_escape_string($con,$_POST['username']);
     $pass = mysqli_real_escape_string($con,$_POST['pass']);
 
-if ($UserN != "" && $pass != ""){
+if ($username != "" && $pass != ""){
 
-        $sql_query = "select count(*) UserID from user where UserN='".$UserN."' and pass='".$pass."'";
+    session_start();
+        $sql_query = "select count(*) userid from users where username='".$username."' and pass='".$pass."'";
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
 
-        $count = $row['UserID'];
+        $count = $row['userid'];
 
         if($count > 0){
-            $_SESSION['UID'] = $UserID;
+            $_SESSION['UID'] = $username;
+
             header('Location: member.php');
         }else{
             echo "Invalid username and password";
@@ -27,15 +29,15 @@ if(isset($_POST['loginN'])){
     $passN = mysqli_real_escape_string($con,$_POST['passN']);
 
 if ($AdminN != "" && $passN != ""){
-
+    session_start();
         $sql_query = "select count(*) AdminID from Admin where AdminN='".$AdminN."' and passN='".$passN."'";
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
 
         $count = $row['AdminID'];
-
+        
         if($count > 0){
-            $_SESSION['AID'] = $AdminID;
+            $_SESSION['AID'] = $AdminN;
             header('Location: Admin.php');
         }else{
             echo "Invalid username and password";
