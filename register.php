@@ -1,5 +1,6 @@
 <?php require "dbconnect.php";
 require "loginproc.php";
+include "config.php";
 ?>
 <html>
 
@@ -30,7 +31,7 @@ require "loginproc.php";
 		<a class="active" href="register.php">Open a New Account</a>
 		<a href="invoice.php">Cart</a>
 		<?php include "login button.php" ?>
-			</div>
+	</div>
 
 	</div>
 	</form>
@@ -38,22 +39,20 @@ require "loginproc.php";
 	</div>
 	<div class="row">
 
-
 		<h2 style=" text-align: center; color: #277583; padding: 20px">Sign Up</h2>
 		<!--headline tag -->
 		<!--inline CSS-->
 		<div class="col-md-6 w-50">
 			<div class="signupbox">
 				<!--new devision -->
-				<form class="signup" action="dbconnect.php" method="post">
+
+
+				<form class="signup" action="dbconnect.php" method="POST">
 					<!--new form -->
 					<div class="mb-3">
-						<div <?php if (isset($name_error)) : ?> class="form_error" <?php endif ?>>
+						<div>
 							<label for="username" class="form-label"><b>User Name:</b></label>
-							<input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?? ''; ?>" class="form-control" required>
-							<?php if (isset($name_error)) : ?>
-								<span><?php echo $name_error; ?></span>
-							<?php endif ?>
+							<input type="text" name="username" id="username" placeholder="Username" class="form-control" required>
 						</div>
 					</div>
 					<!--line brack -->
@@ -64,12 +63,9 @@ require "loginproc.php";
 					</div>
 
 					<div class="mb-3">
-						<div <?php if (isset($email_error)) : ?> class="form_error" <?php endif ?>>
+						<div>
 							<label for="email" class="form-label"><b>E-mail:</b>
-								<input type="email" name="email" id="email" placeholder="email" class="form-control" required value="<?php echo $email ?? ''; ?>"></label>
-							<?php if (isset($email_error)) : ?>
-								<span><?php echo $email_error; ?></span>
-							<?php endif ?>
+								<input type="email" name="email" id="email" placeholder="email" class="form-control" required></label>
 						</div>
 					</div>
 
@@ -82,13 +78,13 @@ require "loginproc.php";
 						<label for="mobile" class="form-label"><b>Mobile:</b>
 							<input type="text" name="mobile" id="mobile" placeholder="mobile" class="form-control" required></label>
 					</div>
+<div class="mb-3">
+					<!--button tag -->
+					<input name="submit" type="submit" id="log" value="Sign Up">
+				</div>
 
-					<div class="mb-3">
-						<!--button tag -->
-						<input name="submit" type="submit" id="log" value="Sign Up">
-					</div>
 				</form>
-
+				
 			</div>
 		</div>
 		<div class="col-md-6">

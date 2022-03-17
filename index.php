@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>E-BazzaR</title>
   <link rel="stylesheet" type="text/css" href="css.css">
@@ -8,22 +8,9 @@
 </head>
 
 <body>
-  <nav>
-
-    <div class="topnav">
-      <!-- logo  -->
-      <a href="index.php">
-        <img src="image/logo.png" alt="logo" style="height: 30px; width:100px;">
-        <a class="active" href="index.php">E-bazzaR</a>
-        <a href="register.php">Open a New Account</a>
-        <a href="invoice.php">Invoice</a>
-        <a href="Adminlog.php">Admin Login</a>
-        <a href="search.php">search</a>
-        <!--<form action="newlogin.php" method="post">-->
-        <?php include "login button.php" ?>
-
-    </div>
-  </nav>
+  <?php
+  include "nav.php";
+  ?>
 
   <div class="container">
     <div class="row">
@@ -37,7 +24,7 @@
       if ($check_price) {
         while ($row = mysqli_fetch_array($query_run)) {
       ?>
-          <div class="col-md-3" style="margin:top-3; padding-top: 10px;">
+          <div class="col-md-3" style="margin:top-3; padding-top: 10px; ">
             <div class="card">
               <img src="image/<?php echo $row['image']; ?>" alt="E-bazzaR">
               <h3><?php echo $row['Name']; ?></h3>

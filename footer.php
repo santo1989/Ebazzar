@@ -12,14 +12,20 @@
                         <a href="index.php" class="text-white" style="text-decoration: none;"> E-Bazzer</a>
                     </p>
                     <p><i class="fas fa-home mr-3"></i>Bangladesh Open University, <br />School of Science and Technology, <br />Department of Computer Science and Engineering, <br />Gazipur, Bangladesh.
-                        </p>
+                    </p>
                     <p></p>
 
                 </div>
                 <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-blod text-warning">Products</h5>
-
-                    <p>
+                    <h5 class="text-uppercase mb-4 font-weight-blod text-warning">Category</h5>
+                    <p> <?php
+                        $sql = "SELECT * FROM categories";
+                        $result = mysqli_query($con, $sql);
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<p><a href="categories.php?id=' . $row['id'] . '" class="text-white" style="text-decoration: none;">' . $row['name'] . '</a></p>';
+                        }
+                        ?></p>
+                    <!-- <p>
                         <a href="#" class="text-white" style="text-decoration: none;"> Meat</a>
                     </p>
 
@@ -33,7 +39,7 @@
 
                     <p>
                         <a href="#" class="text-white" style="text-decoration: none;">Vegitable</a>
-                    </p>
+                    </p> -->
 
                 </div>
 
@@ -45,19 +51,19 @@
 
                     <p>
 
-                        <a href="invoice.php" class="text-white" style="text-decoration: none;"> Track on Order</a>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Track on Order</a>
                     </p>
 
                     <p>
-                        <a href="invoice.php" class="text-white" style="text-decoration: none;">Delivery</a>
+                        <a href="#" class="text-white" style="text-decoration: none;">Delivery</a>
                     </p>
 
                     <p>
-                        <a href="return.php" class="text-white" style="text-decoration: none;">Return</a>
+                        <a href="#" class="text-white" style="text-decoration: none;">Return</a>
                     </p>
 
                     <p>
-                        <a href="payment.php" class="text-white" style="text-decoration: none;"> Secure Payment</a>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Secure Payment</a>
                     </p>
 
 
@@ -66,22 +72,22 @@
 
                 <div class="col-md-3 col-lg-3 col-x1-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-blod text-warning">Contact</h5>
-                    
-                        
 
-                        <p>
-                            <i class="fas fa-envelope mr-3"></i>Md. Hasibul Islam Santo. <br />ID: 13-0-52-020-003<br /> Email-santo.botany@gmail.com <br />Phone-01714389465
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope mr-3"></i> Sumaiya Muhammad <br />ID- 15-0-52-020-045 <br />Email- sumaiyamuhammad1999@ gmail.com <br />Phone- 01751559747
 
-                        </p>
+
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i>Md. Hasibul Islam Santo. <br />ID: 13-0-52-020-003<br /> Email-santo.botany@gmail.com <br />Phone-01714389465
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> Sumaiya Muhammad <br />ID- 15-0-52-020-045 <br />Email- sumaiyamuhammad1999@ gmail.com <br />Phone- 01751559747
+
+                    </p>
 
                 </div>
                 <hr class="mb-4">
                 <div class="row align-item-center">
                     <div class="col-md-7 col-lg-8">
-                        <p> copyright @2021 all rigths reserved by;
+                        <p> copyright @2022 all rigths reserved by;
                             <a href="#" class="text-white" style="text-decoration: none;">
                                 <strong class="text-warniing">E-Bazzar</strong>
                             </a>

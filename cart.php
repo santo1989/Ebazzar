@@ -87,17 +87,9 @@ if (isset($_GET["action"])) {
 </head>
 
 <body>
-  <div class="topnav">
-    <a href="index.php">E-bazzaR</a>
-    <a href="register.php">Open a New Account</a>
-    <a class="active" href="cart.php">Cart</a>
-    <a href="invoice.php">Invoice</a>
 
-    <?php include "login button.php" ?>
-
-      </div>
-
-  </div>
+    <?php include "member_nav.php" ?>
+    <div>
   </form>
   </div>
   <h1>Enjoy Shopping</h1>

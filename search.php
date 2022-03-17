@@ -55,7 +55,7 @@
                   <th>Description</th>
                   <th>Price</th>
                   <th>image</th>
-                  <th>category</th>
+                  <!-- <th>category</th> -->
                   <th>Add to cart</th>
 
                </tr>
@@ -66,7 +66,7 @@
                      <td><?php echo $row->Description ?></td>
                      <td><?php echo $row->Price ?></td>
                      <td><img src="image/<?php echo $row->image ?>"></td>
-                     <td><?php echo $row->category ?></td>
+                     <!-- <td><?php //echo $row->category ?></td> -->
                      <td><a href="register.php"><button>Add to Cart</button></a></td>
                   </tr>
                <?php endwhile; ?>

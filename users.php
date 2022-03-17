@@ -1,13 +1,6 @@
 <?php
+session_start();
 include "config.php";
-// Initialize shopping cart class   
-// Include the database config file 
-require "loginproc.php";
-// for sending Edit from database 
-include 'CRUD.php';
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,10 +22,56 @@ include 'CRUD.php';
 </head>
 
 <body>
+<?php include "deshboard_top.php" ?>
 
-  <?php
-  include "deshboard_top.php";
-  ?>
+        <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+
+        <h2>Customers</h2>
+
+        <div class="table-responsive">
+
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Address</th>
+                <th>Mobile</th>
+              </tr>
+            </thead>
+            <?php
+            require "dbconnect.php";
+
+            $con = mysqli_connect($host, $user, $password, $dbname);
+            $query = "SELECT * FROM `users`;";
+            $query_run = mysqli_query($con, $query);
+            $check_price = mysqli_num_rows($query_run) > 0;
+
+            if ($check_price) {
+              while ($row = mysqli_fetch_array($query_run)) {
+            ?>
+                <tbody>
+                  <tr>
+                    <td><?php echo  $row['userid']; ?></td>
+                    <td><?php echo $row['username']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['address']; ?></td>
+                    <td><?php echo $row['mobile']; ?></td>
+                  </tr>
+              <?php
+              }
+            } else {
+              echo "no record found";
+            }
+              ?>
+                </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
 
 
   <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl" crossorigin="anonymous"></script>

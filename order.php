@@ -1,13 +1,6 @@
 <?php
+session_start();
 include "config.php";
-// Initialize shopping cart class   
-// Include the database config file 
-require "loginproc.php";
-// for sending Edit from database 
-include 'CRUD.php';
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,9 +23,43 @@ include 'CRUD.php';
 
 <body>
 
-  <?php
-  include "deshboard_top.php";
-  ?>
+  <?php include "deshboard_top.php" ?>
+
+  <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+
+  <h2>Order</h2>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer Mobile</th>
+              <th>Customer Address</th>
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+              <th>Order Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+<?php 
+ 
+?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </main>
+  </div>
+
 
 
   <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl" crossorigin="anonymous"></script>

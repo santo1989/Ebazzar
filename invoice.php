@@ -75,20 +75,20 @@ session_start();
       <!--<form action="newlogin.php" method="post">-->
       <?php include "login button.php" ?>
 
-        </div>
-
     </div>
-    </form>
+
+  </div>
+  </form>
 
   </div>
   </br>
   <div class="row">
     <div class="col-md-6">
       <div class=" hidden-print" style="text-align: center;">
-        <a href="payment.php" button type="submit" name="checkout" <?php if (empty($_SESSION["shopping_cart"])) {
+        <a href="bill.php" button type="submit" name="checkout" <?php if (empty($_SESSION["shopping_cart"])) {
 
-                                              echo "disabled";
-                                            } ?> class="btn btn-primary">Checkout bill</a>
+                                                                  echo "disabled";
+                                                                } ?> class="btn btn-primary">Checkout bill</a>
       </div>
 
     </div>
@@ -193,14 +193,14 @@ session_start();
               <?php }
               ?>
               <table id="Orders">
-              <tr>
+                <!-- <tr>
                       <td><b>Payment Method:</b></td>
                       <td>Cash on Delivery</td>
                     </tr>
                     <tr>
                       <td><b>Order Status:</b></td>
                       <td>Successful</td>
-                    </tr>
+                    </tr> -->
                 <?php
                 // echo'<pre>';
                 // print_r($_SESSION);
@@ -215,14 +215,14 @@ session_start();
                     // }
                 ?>
 
-                    <!-- <tr>
+                    <tr>
                       <td><b>Payment Method:</b></td>
                       <td>Cash on Delivery</td>
                     </tr>
                     <tr>
                       <td><b>Order Status:</b></td>
                       <td>Successful</td>
-                    </tr> -->
+                    </tr>
                     <tr>
                       <td><b>Transaction Pin:</b>
                       <td><?php echo date("dmY") . ':' . $values['userid'] . ':' . rand(1, 99999); ?></td>
@@ -264,11 +264,11 @@ session_start();
           <p><b>Signature</b></p>
         </div>
         <div class=" hidden-print">
-          <a href=#  button type="submit" name="print" class="btn btn-primary hidden-print " id="btnPrint" >Print</button></a>
-          <?php 
-            // unset($_SESSION['shopping_cart']);
-          
-          
+          <a href=# button type="submit" name="print" class="btn btn-primary hidden-print " id="btnPrint">Print</button></a>
+          <?php
+          // unset($_SESSION['shopping_cart']);
+
+
           ?>
         </div>
       </div>
